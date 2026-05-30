@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — HonestRep</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Base ── */
+    :root {
+      --bg:        #ffffff;
+      --surface:   #f5f5f7;
+      --border:    #d2d2d7;
+      --text:      #1d1d1f;
+      --secondary: #6e6e73;
+      --accent:    #ff6b2b;
+      --link:      #0071e3;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:        #000000;
+        --surface:   #1c1c1e;
+        --border:    #38383a;
+        --text:      #f5f5f7;
+        --secondary: #98989d;
+        --accent:    #ff8c5a;
+        --link:      #2997ff;
+      }
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .app-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .effective-date {
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    section p,
+    section li {
+      font-size: 0.975rem;
+      color: var(--secondary);
+      margin-bottom: 0.6rem;
+    }
+
+    section p:last-child,
+    section li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Callout box (camera / highlights) ── */
+    .callout {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .callout p {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      color: var(--secondary);
+    }
+
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .data-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--secondary);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table code {
+      font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+      font-size: 0.8rem;
+      background: var(--surface);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+      color: var(--text);
+    }
+
+    /* ── "Not collected" list ── */
+    .not-collected {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .not-collected span {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.85rem;
+      color: var(--secondary);
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--secondary);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ── Header ── -->
+    <header>
+      <p class="app-name">HonestRep</p>
+      <h1>Privacy Policy</h1>
+      <p class="effective-date">
+        Effective date: <strong>March 6, 2026</strong>
+      </p>
+    </header>
+
+    <!-- 1. Introduction -->
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        HonestRep is an iOS app that uses your device's camera and Apple's
+        on-device pose detection to count push-up repetitions and score your
+        form in real time. HonestRep is operated by
+        <strong>[YOUR NAME OR COMPANY]</strong>.
+      </p>
+      <p>
+        This policy explains what information HonestRep stores, how it is
+        used, and what it absolutely does not do. The short version: everything
+        stays on your device, nothing is sent to us, and we do not know who
+        you are.
+      </p>
+      <p>
+        Questions? Contact us at
+        <a href="mailto:support@honestrep.app">support@honestrep.app</a>.
+      </p>
+    </section>
+
+    <!-- 2. Data We Collect (on-device) -->
+    <section id="data-we-collect">
+      <h2>Data We Collect</h2>
+      <p>
+        HonestRep requires no account and creates no profile. All data the
+        app generates is stored <strong>locally on your device</strong> using
+        Apple's SwiftData and standard system storage (UserDefaults). None of
+        it is transmitted to us or any third party.
+      </p>
+
+      <h3 style="font-size:1rem; font-weight:600; margin: 1.25rem 0 0.5rem; color:var(--text);">
+        Workout &amp; goal data (SwiftData — local only)
+      </h3>
+      <p>
+        Your workout sessions, rep counts, form grades, daily goals, streaks,
+        and lifetime statistics are stored in a local database on your device.
+        Deleting the app permanently erases this data.
+      </p>
+
+      <h3 style="font-size:1rem; font-weight:600; margin: 1.25rem 0 0.5rem; color:var(--text);">
+        App preferences &amp; settings (UserDefaults — local only)
+      </h3>
+      <p>
+        The following values are stored as plain key-value pairs on your device:
+      </p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>What is stored</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Onboarding completed flag</td>
+            <td>To skip the intro screens after first launch</td>
+          </tr>
+          <tr>
+            <td>Preferred daily rep goal</td>
+            <td>To remember your target between sessions</td>
+          </tr>
+          <tr>
+            <td>Voice guidance on/off</td>
+            <td>To preserve your audio preference</td>
+          </tr>
+          <tr>
+            <td>Daily reminder on/off &amp; time</td>
+            <td>To schedule your local push notification</td>
+          </tr>
+          <tr>
+            <td>Pro entitlement status &amp; trial flag</td>
+            <td>
+              Cached from StoreKit so the UI renders correctly on cold launch
+              without waiting for an App Store network call
+            </td>
+          </tr>
+          <tr>
+            <td>Subscription expiration date</td>
+            <td>Cached from StoreKit for the same reason</td>
+          </tr>
+          <tr>
+            <td>Session count &amp; paywall display flags</td>
+            <td>To decide when to show the upgrade prompt</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-size:1rem; font-weight:600; margin: 1.25rem 0 0.5rem; color:var(--text);">
+        Subscription billing
+      </h3>
+      <p>
+        Subscription purchases are processed entirely by Apple through the App
+        Store. HonestRep never sees your payment information. Apple's handling
+        of transaction data is governed by
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">
+          Apple's Privacy Policy</a>.
+      </p>
+    </section>
+
+    <!-- 3. Camera & Pose Detection -->
+    <section id="camera">
+      <h2>Camera &amp; Pose Detection</h2>
+      <p>
+        HonestRep requests access to your device's camera for one purpose only:
+        detecting your body position during a push-up session.
+      </p>
+
+      <div class="callout">
+        <p>✓ Camera frames are processed <strong>entirely on your device</strong>
+           using Apple's Vision framework.</p>
+        <p>✓ <strong>No video, images, or pose data are ever recorded</strong>,
+           saved beyond the active session, or sent anywhere.</p>
+        <p>✓ We have <strong>no access to your camera feed</strong> — it never
+           leaves your device.</p>
+        <p>✓ When you end or pause a session, camera processing stops
+           immediately.</p>
+      </div>
+    </section>
+
+    <!-- 4. What We Do NOT Collect -->
+    <section id="not-collected">
+      <h2>What We Do Not Collect</h2>
+      <p>
+        HonestRep does not collect, store, or transmit any of the following:
+      </p>
+      <div class="not-collected">
+        <span>Name or email address</span>
+        <span>Location data</span>
+        <span>Health or HealthKit records</span>
+        <span>Payment information</span>
+        <span>Device identifiers (IDFA, IDFV)</span>
+        <span>Advertising IDs</span>
+        <span>IP address</span>
+        <span>Crash logs</span>
+        <span>Analytics events</span>
+        <span>Behavioral tracking data</span>
+        <span>Video or images</span>
+        <span>Pose keypoints</span>
+        <span>Microphone audio</span>
+      </div>
+    </section>
+
+    <!-- 5. Third-Party Services -->
+    <section id="third-parties">
+      <h2>Third-Party Services</h2>
+      <p>
+        HonestRep has <strong>zero third-party SDKs</strong>. There are no
+        analytics libraries, no crash reporters, no advertising networks, and
+        no social login frameworks embedded in the app.
+      </p>
+      <p>
+        The only external service the app interacts with is the
+        <strong>Apple App Store</strong>, via Apple's own StoreKit framework,
+        for processing subscription purchases and verifying entitlements.
+        Apple's data practices for this are covered by
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">
+          Apple's Privacy Policy</a>.
+      </p>
+      <p>
+        Daily reminder notifications are delivered by iOS's local notification
+        system. They are scheduled on-device and do not go through any
+        third-party push notification service.
+      </p>
+    </section>
+
+    <!-- 6. Data Retention & Deletion -->
+    <section id="retention">
+      <h2>Data Retention &amp; Deletion</h2>
+      <p>
+        All app data — workout history, goals, preferences, and settings — is
+        stored on your device and under your control at all times.
+      </p>
+      <p>
+        <strong>To delete all your data:</strong> delete the HonestRep app from
+        your device. iOS will remove the app's SwiftData database and all
+        UserDefaults entries automatically. This action is irreversible.
+      </p>
+      <p>
+        If you have questions about data or want to make a deletion request,
+        contact us at
+        <a href="mailto:support@honestrep.app">support@honestrep.app</a>.
+        Since we do not collect data on our servers, we cannot delete data that
+        was never transmitted to us — but we are happy to help you understand
+        what is stored locally and how to remove it.
+      </p>
+    </section>
+
+    <!-- 7. Children's Privacy -->
+    <section id="children">
+      <h2>Children's Privacy</h2>
+      <p>
+        HonestRep is not directed at children under the age of 13. We do not
+        knowingly collect personal information from children under 13. If you
+        believe a child under 13 has provided personal information through the
+        app, please contact us at
+        <a href="mailto:support@honestrep.app">support@honestrep.app</a>
+        and we will take appropriate steps.
+      </p>
+    </section>
+
+    <!-- 8. Changes to This Policy -->
+    <section id="changes">
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. When we do, we
+        will update the effective date at the top of this page. We encourage
+        you to review this policy periodically. Continued use of the app after
+        changes are posted constitutes your acceptance of the updated policy.
+      </p>
+    </section>
+
+    <!-- 9. Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        If you have questions, concerns, or requests related to this Privacy
+        Policy, please reach out:
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:support@honestrep.app">support@honestrep.app</a>
+      </p>
+      <p>
+        <strong>Website:</strong>
+        <a href="https://honestrep.app/privacy">https://honestrep.app/privacy</a>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2026 <strong>[YOUR NAME OR COMPANY]</strong>. All rights reserved.
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
